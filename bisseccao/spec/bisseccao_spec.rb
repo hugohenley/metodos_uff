@@ -5,12 +5,12 @@ describe Bisseccao do
   context "#tem_raiz?" do
     it "retorna true caso o produto das imagens seja menor que 0" do
       Bisseccao.any_instance.stub(:funcao).and_return(-1, 1)
-      Bisseccao.new(2, 3, 10^-3).tem_raiz?.should be_true
+      Bisseccao.new(2, 3, 10^-3).tem_raiz?(-1, 1).should be_true
     end
 
     it "retorna false caso o produto das imagens seja maior que 0" do
       Bisseccao.any_instance.stub(:funcao).and_return(1, 1)
-      Bisseccao.new(2, 3, 10^-3).tem_raiz?.should be_false
+      Bisseccao.new(2, 3, 10^-3).tem_raiz?(-1, 1).should be_false
     end
 
   end
