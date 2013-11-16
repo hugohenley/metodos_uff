@@ -60,7 +60,7 @@ describe DecimalHexa do
 
   it "a conversão do decimal 201230123 para hexa deve ser igual a BFE872B" do
     DecimalHexa.new(201230123).to_hex.should == 'BFE872B'
-    end
+  end
 
   it "a conversão do decimal 2012301234 para hexa deve ser igual a 77F147B2" do
     DecimalHexa.new(2012301234).to_hex.should == '77F147B2'
