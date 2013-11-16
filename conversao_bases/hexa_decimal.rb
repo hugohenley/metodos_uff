@@ -13,7 +13,7 @@ class HexaDecimal
     indice = 0
     soma = 0
     while indice_str >= 0 do
-      soma += ((converter_para_decimal(@hexa[indice_str])).to_i * (16**indice))
+      soma += ((converter_para_decimal(@hexa[indice_str])).to_iw * (16**indice))
       indice += 1
       indice_str -= 1
     end
