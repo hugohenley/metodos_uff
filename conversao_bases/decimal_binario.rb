@@ -7,6 +7,7 @@ class DecimalBinario
   
   def to_bin
     binarios = []
+    return '1' if @decimal == 1
     
     while (@decimal / 2) != 1 do
       binarios << @decimal % 2

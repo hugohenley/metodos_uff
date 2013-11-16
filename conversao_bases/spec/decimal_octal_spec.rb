@@ -2,10 +2,6 @@
 require '../decimal_binario'
 
 describe DecimalBinario do
-  it "a conversão do decimal 1 para base 2 deve ser igual a 1" do
-    DecimalBinario.new(1).to_bin.should == '1'
-  end
-
   it "a conversão do decimal 10 para base 2 deve ser igual a 1010" do
     DecimalBinario.new(10).to_bin.should == '1010'
   end
