@@ -1,28 +1,24 @@
 #encoding: utf-8
-require '../decimal_binario'
+require '../decimal_octal'
 
-describe DecimalBinario do
-  it "a conversão do decimal 10 para base 2 deve ser igual a 1010" do
-    DecimalBinario.new(10).to_bin.should == '1010'
+describe DecimalOctal do
+  it "a conversão do decimal 1 para base 8 deve ser igual a 1" do
+    DecimalOctal.new(1).to_octal.should == '1'
   end
-  
-  it "a conversão do decimal 23 para base 2 deve ser igual a 10111" do
-    DecimalBinario.new(23).to_bin.should == '10111'
+
+  it "a conversão do decimal 10 para base 8 deve ser igual a 12" do
+    DecimalOctal.new(10).to_octal.should == '12'
   end
-  
-  it "a conversão do decimal 42 para base 2 deve ser igual a 101010" do
-    DecimalBinario.new(42).to_bin.should == '101010'
+
+  it "a conversão do decimal 22 para base 8 deve ser igual a 26" do
+    DecimalOctal.new(22).to_octal.should == '26'
   end
-  
-  it "a conversão do decimal 33 para base 2 deve ser igual a 100001" do
-    DecimalBinario.new(33).to_bin.should == '100001'
+
+  it "a conversão do decimal 41 para base 8 deve ser igual a 51" do
+    DecimalOctal.new(41).to_octal.should == '51'
   end
-  
-  it "a conversão do decimal 91238 para base 2 deve ser igual a " do
-    DecimalBinario.new(91238).to_bin.should == '10110010001100110'
-  end
-  
-  it "a conversão do decimal 182381723 para base 2 deve ser igual a " do
-    DecimalBinario.new(182381723).to_bin.should == '1010110111101110110010011011'
+
+  it "a conversão do decimal 41 para base 8 deve ser igual a 51" do
+    DecimalOctal.new(1985).to_octal.should == '3701'
   end
 end
