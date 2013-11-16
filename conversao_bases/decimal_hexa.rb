@@ -26,10 +26,6 @@ class DecimalHexa
 
   private
   def converter_hexa(numero)
-    if numero.between?(10, 15)
-      CONVERSAO[numero]
-    else
-      numero
-    end
+    numero.between?(10, 15) ? CONVERSAO[numero] : numero
   end
 end
