@@ -1,9 +1,9 @@
 #encoding: utf-8
-class BinarioDecimal
-  attr_accessor :binario
+class OctaDecimal
+  attr_accessor :octa
 
-  def initialize(binario)
-    @octa = binario
+  def initialize(octa)
+    @octa = octa
   end
 
   def to_decimal
@@ -12,7 +12,7 @@ class BinarioDecimal
     indice = 0
     soma = 0
     while tamanho != 0 do
-      soma += ((@octa % 10) * (2**indice))
+      soma += ((@octa % 10) * (8**indice))
       @octa = @octa / 10
       indice += 1
       tamanho -= 1
