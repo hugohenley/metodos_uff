@@ -8,8 +8,8 @@ class DecimalOutra
                34 => 'Y', 35 => 'Z'}
 
   def initialize(decimal, base)
-    @decimal = decimal.to_i
-    @base = base.to_i
+    @decimal = decimal
+    @base = base
   end
 
   def converter
