@@ -54,5 +54,4 @@ describe ConversaoDecimal do
     ConversaoDecimal.new(123, 36).to_decimal.should == 1371
   end
 
-
 end
