@@ -79,4 +79,122 @@ describe DecimalOutra do
     DecimalOutra.new(18238, 9).converter.should == '27014'
   end
 
+  it "a conversão do decimal 18238 para base 10 deve ser igual a 18238" do
+    DecimalOutra.new(18238, 10).converter.should == '18238'
+  end
+
+  it "a conversão do decimal 18238 para base 11 deve ser igual a 12780" do
+    DecimalOutra.new(18238, 11).converter.should == '12780'
+  end
+
+  it "a conversão do decimal 18238 para base 12 deve ser igual a A67A" do
+    DecimalOutra.new(18238, 12).converter.should == 'A67A'
+  end
+
+  it "a conversão do decimal 18238 para base 13 deve ser igual a 83BC" do
+    DecimalOutra.new(18238, 13).converter.should == '83BC'
+  end
+
+  it "a conversão do decimal 18238 para base 14 deve ser igual a 690A" do
+    DecimalOutra.new(18238, 14).converter.should == '690A'
+  end
+
+  it "a conversão do decimal 18238 para base 15 deve ser igual a 560D" do
+    DecimalOutra.new(18238, 15).converter.should == '560D'
+  end
+
+  it "a conversão do decimal 18238 para base 15 deve ser igual a 560D" do
+    DecimalOutra.new(18238, 15).converter.should == '560D'
+  end
+
+  it "a conversão do decimal 18238 para base 16 deve ser igual a 473E" do
+    DecimalOutra.new(18238, 16).converter.should == '473E'
+  end
+
+  it "a conversão do decimal 18238 para base 17 deve ser igual a 3C1E" do
+    DecimalOutra.new(18238, 17).converter.should == '3C1E'
+  end
+
+  it "a conversão do decimal 18238 para base 18 deve ser igual a 3254" do
+    DecimalOutra.new(18238, 18).converter.should == '3254'
+  end
+
+  it "a conversão do decimal 18238 para base 19 deve ser igual a 2C9H" do
+    DecimalOutra.new(18238, 19).converter.should == '2C9H'
+  end
+
+  it "a conversão do decimal 18238 para base 20 deve ser igual a 25BI" do
+    DecimalOutra.new(18238, 20).converter.should == '25BI'
+  end
+
+  it "a conversão do decimal 18238 para base 21 deve ser igual a 1K7A" do
+    DecimalOutra.new(18238, 21).converter.should == '1K7A'
+  end
+
+  it "a conversão do decimal 18238 para base 22 deve ser igual a 1FF0" do
+    DecimalOutra.new(18238, 22).converter.should == '1FF0'
+  end
+
+  it "a conversão do decimal 18238 para base 23 deve ser igual a 1BAM" do
+    DecimalOutra.new(18238, 23).converter.should == '1BAM'
+  end
+
+  it "a conversão do decimal 18238 para base 24 deve ser igual a 17FM" do
+    DecimalOutra.new(18238, 24).converter.should == '17FM'
+  end
+
+  it "a conversão do decimal 18238 para base 25 deve ser igual a 144D" do
+    DecimalOutra.new(18238, 25).converter.should == '144D'
+  end
+
+  it "a conversão do decimal 18238 para base 26 deve ser igual a 10PC" do
+    DecimalOutra.new(18238, 26).converter.should == '10PC'
+  end
+
+  it "a conversão do decimal 18238 para base 27 deve ser igual a P0D" do
+    DecimalOutra.new(18238, 27).converter.should == 'P0D'
+  end
+
+  it "a conversão do decimal 18238 para base 28 deve ser igual a N7A" do
+    DecimalOutra.new(18238, 28).converter.should == 'N7A'
+  end
+
+  it "a conversão do decimal 18238 para base 29 deve ser igual a LJQ" do
+    DecimalOutra.new(18238, 29).converter.should == 'LJQ'
+  end
+
+  it "a conversão do decimal 18238 para base 30 deve ser igual a K7S" do
+    DecimalOutra.new(18238, 30).converter.should == 'K7S'
+  end
+
+  it "a conversão do decimal 18238 para base 31 deve ser igual a IUA" do
+    DecimalOutra.new(18238, 31).converter.should == 'IUA'
+  end
+
+  it "a conversão do decimal 18238 para base 32 deve ser igual a HPU" do
+    DecimalOutra.new(18238, 32).converter.should == 'HPU'
+  end
+
+  it "a conversão do decimal 18238 para base 33 deve ser igual a GOM" do
+    DecimalOutra.new(18238, 33).converter.should == 'GOM'
+  end
+
+  it "a conversão do decimal 18238 para base 34 deve ser igual a FQE" do
+    DecimalOutra.new(18238, 34).converter.should == 'FQE'
+  end
+
+  it "a conversão do decimal 18238 para base 35 deve ser igual a EV3" do
+    DecimalOutra.new(18238, 35).converter.should == 'EV3'
+  end
+
+  it "a conversão do decimal 18238 para base 35 deve ser igual a EV3" do
+    DecimalOutra.new(18238, 35).converter.should == 'EV3'
+  end
+
+  it "a conversão do decimal 18238 para base 36 deve ser igual a E2M" do
+    DecimalOutra.new(18238, 36).converter.should == 'E2M'
+  end
+
+
+
 end
