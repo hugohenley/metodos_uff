@@ -2,6 +2,10 @@
 require '../conversao_decimal'
 
 describe ConversaoDecimal do
+  it "a conversão do numero 1010 na base 2 para decimal deve ser igual a 10" do
+    ConversaoDecimal.new(1010, 2).to_decimal.should == 10
+  end
+
   it "a conversão do numero 1 na base 3 para decimal deve ser igual a 1" do
     ConversaoDecimal.new(1, 3).to_decimal.should == 1
   end
@@ -36,15 +40,15 @@ describe ConversaoDecimal do
 
   it "a conversão do numero 14 na base 9 para decimal deve ser igual a 13" do
     ConversaoDecimal.new(14, 9).to_decimal.should == 13
-    end
+  end
 
   it "a conversão do numero 14 na base 10 para decimal deve ser igual a 14" do
     ConversaoDecimal.new(14, 10).to_decimal.should == 14
-    end
+  end
 
   it "a conversão do numero 1230 na base 12 para decimal deve ser igual a 2052" do
     ConversaoDecimal.new(1230, 12).to_decimal.should == 2052
-    end
+  end
 
   it "a conversão do numero 123 na base 36 para decimal deve ser igual a 1371" do
     ConversaoDecimal.new(123, 36).to_decimal.should == 1371
