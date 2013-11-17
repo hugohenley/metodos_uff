@@ -14,10 +14,10 @@ class Secante
   end
 
   def calcular_raiz
-    if criterio_parada(@x1, @x0)
-      @x1
+    @novo_x = (@x0*funcao(@x1) - @x1*funcao(@x0))/(funcao(@x1) - funcao(@x0))
+    if criterio_parada(x1, x0)
+      @novo_x
     else
-      @novo_x = (@x0*funcao(@x1) - @x1*funcao(@x0))/(funcao(@x1) - funcao(@x0))
       @x0 = @x1
       @x1 = @novo_x
       calcular_raiz
