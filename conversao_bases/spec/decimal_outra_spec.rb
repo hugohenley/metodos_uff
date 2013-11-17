@@ -195,6 +195,4 @@ describe DecimalOutra do
     DecimalOutra.new(18238, 36).converter.should == 'E2M'
   end
 
-
-
 end
