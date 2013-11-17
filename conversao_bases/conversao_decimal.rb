@@ -3,8 +3,8 @@ class ConversaoDecimal
   attr_accessor :numero, :base
 
   def initialize(numero, base)
-    @numero = numero
-    @base = base
+    @numero = numero.to_i
+    @base = base.to_i
   end
 
   def to_decimal

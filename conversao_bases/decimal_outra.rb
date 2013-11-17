@@ -2,8 +2,8 @@ class DecimalOutra
   attr_accessor :decimal, :base
 
   def initialize(decimal, base)
-    @decimal = decimal
-    @base = base
+    @decimal = decimal.to_i
+    @base = base.to_i
   end
 
   def converter
