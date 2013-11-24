@@ -1,8 +1,6 @@
 #encoding: utf-8
 require '../conversao_bases/conversao_decimal'
 require '../conversao_bases/decimal_outra'
-require '../conversao_bases/decimal_hexa'
-require '../conversao_bases/hexa_decimal'
 
 puts "Escolha um número para converter"
 numero = gets.chomp
