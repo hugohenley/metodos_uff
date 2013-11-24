@@ -15,7 +15,7 @@ describe Bisseccao do
   end
 
   context "#calcular_raiz" do
-    it "retorna 0.3369140625 caso inicio=0, fim=1, precisao=0.001, grau=2 e coeficientes sejam [1, -9, 3]" do
+    it "retorna 0.3369140625 caso inicio=0, fim=1, precisao=0.001, grau=3 e coeficientes sejam [1, 0, -9, 3]" do
       Bisseccao.new(0, 1, 0.001, 3, [1, 0, -9, 3]).calcular_raiz.should == 0.3369140625
     end
   end
