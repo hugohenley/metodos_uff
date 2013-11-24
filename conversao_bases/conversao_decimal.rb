@@ -7,17 +7,44 @@ class ConversaoDecimal
                'V' => 31, 'W' => 32, 'X' => 33, 'Y' => 34, 'Z' => 35}
 
   def initialize(numero, base)
-    @numero = numero
+    @numero = numero.to_s
     @base = base
   end
 
+  def tem_parte_fracionaria?
+    @numero.split('.').size == 2
+  end
+
   def to_decimal
+    if tem_parte_fracionaria?
+      inteira = parte_inteira(@numero.split('.')[0])
+      fracionaria = parte_fracionaria(@numero.split('.')[1])
+      inteira + fracionaria
+    else
+      parte_inteira(@numero)
+    end
+  end
+
+  def parte_inteira(numero)
     return 1 if numero == '1'
-    indice_str = @numero.to_s.size - 1
+    indice_str = numero.to_s.size - 1
     indice = 0
     soma = 0
     while indice_str >= 0 do
-      soma += ((converter_para_decimal(@numero[indice_str])).to_i * (@base**indice))
+      soma += ((converter_para_decimal(numero[indice_str])).to_i * (@base**indice))
+      indice += 1
+      indice_str -= 1
+    end
+    soma
+  end
+
+  def parte_fracionaria(numero)
+    return 1 if numero == '1'
+    indice_str = numero.to_s.size - 1
+    indice = -1*numero.to_s.size
+    soma = 0.0
+    while indice_str >= 0 do
+      soma += ((converter_para_decimal(numero[indice_str])).to_i * (@base**(indice)))
       indice += 1
       indice_str -= 1
     end
