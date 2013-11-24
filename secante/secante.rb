@@ -1,16 +1,22 @@
 #encoding: utf-8
 class Secante
-  attr_accessor :x0, :x1, :precisao, :novo_x
+  attr_accessor :x0, :x1, :precisao, :novo_x, :grau, :coeficientes
 
-  def initialize(x1, x0, precisao)
+  def initialize(x0, x1, precisao, grau, coeficientes)
     @x0 = x0.to_f
     @x1 = x1.to_f
     @precisao = precisao.to_f
     @novo_x = nil
+    @grau = grau
+    @coeficientes = coeficientes
   end
 
   def funcao(x)
-    x**3-9*x+3
+    if @grau == 2
+      @coeficientes[0]*x**2 + @coeficientes[1]*x + @coeficientes[2]
+    elsif @grau == 3
+      @coeficientes[0]*x**3 + @coeficientes[1]*x**2 + @coeficientes[2]*x + @coeficientes[3]
+    end
   end
 
   def calcular_raiz
