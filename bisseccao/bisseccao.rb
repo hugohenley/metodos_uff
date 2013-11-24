@@ -1,27 +1,21 @@
 #encoding: utf-8
 class Bisseccao
-  attr_reader :exp, :inicio, :fim, :precisao
+  attr_reader :exp, :inicio, :fim, :precisao, :grau, :coeficientes
 
-  def initialize(inicio, fim, precisao)
+  def initialize(inicio, fim, precisao, grau, coeficientes)
     @inicio = inicio.to_f
     @fim = fim.to_f
     @precisao = precisao
+    @grau = grau
+    @coeficientes = coeficientes
   end
 
   def calcular_raiz
     raiz = nil
-    puts "============="
-    puts "Fim - Inicio: #{@fim - @inicio}"
-    puts "Precisão: #{precisao}"
-    puts "Fim - Inicio > Precisao? #{(@fim - @inicio) > precisao}"
-    puts "============="
     while (@fim - @inicio) > precisao do
       if tem_raiz?(@inicio, @fim)
-        puts "(1)"
-        puts "Tem raiz aqui! (1)"
-        puts  "A raiz é #{(@inicio + @fim) / 2}"
+        #puts  "A raiz é #{(@inicio + @fim) / 2}"
         raiz = (@inicio + @fim) / 2
-#        puts "Nova raiz: #{raiz}"
         if tem_raiz?(@inicio, raiz)
           @fim = raiz
         end
@@ -36,7 +30,11 @@ class Bisseccao
   end
 
   def funcao(x)
-    x**3 - 9*x + 3
+    if @grau == 2
+      @coeficientes[0]*x**2 + @coeficientes[1]*x + @coeficientes[2]
+    elsif @grau == 3
+      @coeficientes[0]*x**3 + @coeficientes[1]*x**2 + @coeficientes[2]*x + @coeficientes[3]
+    end
   end
 
   def tem_raiz?(inicio, fim)
