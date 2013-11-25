@@ -27,7 +27,7 @@ class Newton
     if @grau == 2
       2*@coeficientes[0]*x + @coeficientes[1]
     elsif @grau == 3
-      3*@coeficientes[0]*x**3 + 2*@coeficientes[1]*x**2 + @coeficientes[2]
+      3*@coeficientes[0]*x**2 + 2*@coeficientes[1]*x + @coeficientes[2]
     end
   end
 
