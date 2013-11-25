@@ -206,6 +206,14 @@ describe DecimalOutra do
       DecimalOutra.new(0.828125, 2).converter.should == '0.110101'
     end
 
+    it "a conversão do decimal 40.375 para base 2 deve ser igual a 101000.011" do
+      DecimalOutra.new(40.375, 2).converter.should == '101000.011'
+    end
+
+    it "a conversão do decimal 8.7 para base 2 deve ser igual a 1000.1011" do
+      DecimalOutra.new(8.7, 2).converter.should == '1000.10110011001100110011001100110011001100110011001100111'
+    end
+
     it "a conversão do decimal 20.40 para base 4 deve ser igual a 110.121212121212121212121212" do
       DecimalOutra.new(20.40, 4).converter.should == '110.121212121212121212121212122'
     end
@@ -240,6 +248,10 @@ describe DecimalOutra do
 
     it "a conversão do decimal 0.38 para base 16 deve ser igual a 0.6147AE147AE148" do
       DecimalOutra.new(0.38, 16).converter.should == '0.6147AE147AE148'
+    end
+
+    it "a conversão do decimal 26.75 para base 16 deve ser igual a 1A.C" do
+      DecimalOutra.new(26.75, 16).converter.should == '1A.C'
     end
 
     it "a conversão do decimal 10.20 para base 32 deve ser igual a A.6CPJ6CPJ6C" do
