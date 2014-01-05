@@ -3,7 +3,7 @@ class Lagrange
   attr_reader :x, :y, :ponto_desejado, :index_x
   
   def initialize(p, x, y)
-    @ponto_desejado = p
+    @ponto_desejado = p.to_f
     @x = x
     @y = y
     @index_x = @x.size - 1
@@ -20,7 +20,7 @@ class Lagrange
   def calcular_coeficiente(j)
     produto = 1.0
     for m in (0..@index_x).to_a do
-      if m != j 
+      if m != j
         produto *= (@ponto_desejado - @x[m])/(@x[j] - @x[m])
       end
     end
